@@ -28,7 +28,7 @@ workflows/<room>/
 ```
 
 The example rooms are `operations`, `research` and `projects`. They are placeholders; adapt them freely.
-The Research room includes a generic set of evidence-led working patterns in `workflows/research/PATTERNS.md`.
+The Research room is also a practical example: [`PRACTICES.md`](workflows/research/PRACTICES.md) walks through an evidence-led project, a fictional worked example shows how the pieces fit, and copyable templates live in `workflows/research/templates/`.
 
 ## Principles
 

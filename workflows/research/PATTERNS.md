@@ -2,6 +2,8 @@
 
 These patterns describe a reusable way to organise research work. Adapt them to the field, project, methods and level of risk. They are prompts for good practice, not a prescribed methodology or a substitute for discipline-specific standards.
 
+For a step-by-step explanation and copyable records, start with [`PRACTICES.md`](PRACTICES.md), then use the fictional [worked example](examples/search-strategy-evaluation.md) and the [project templates](templates/).
+
 ## 1. Frame the question before building
 
 - State the research question in a form that can be answered with evidence.
