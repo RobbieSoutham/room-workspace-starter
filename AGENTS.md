@@ -8,3 +8,5 @@ Before working in this repository:
 4. Check `SOURCE_OF_TRUTH.md` before creating or changing canonical information.
 
 Keep work inside the selected room unless the user asks for a cross-room change. Do not copy private or machine-specific information into this template. Ask before actions that publish data, contact external services or destroy user data.
+
+Room-local agent skills live at `workflows/<room>/skills/<skill-name>/SKILL.md`. Find them through the room's `CONTEXT.md`; read a relevant skill before using it.

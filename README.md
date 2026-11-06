@@ -24,11 +24,12 @@ workflows/<room>/
   CONTEXT.md              Room identity, conventions and boundaries
   CURRENT.md              Active state and next actions
   knowledge/README.md     Index and rules for room-owned knowledge
+  skills/<skill>/SKILL.md  Room-local procedures for agents
   memory/                 Room-specific durable notes
 ```
 
 The example rooms are `operations`, `research` and `projects`. They are placeholders; adapt them freely.
-The Research room is also a practical example: [`PRACTICES.md`](workflows/research/PRACTICES.md) walks through an evidence-led project, a fictional worked example shows how the pieces fit, and copyable templates live in `workflows/research/templates/`.
+The Research room shows how practice is maintained: canonical principles and standards live in `workflows/research/knowledge/`, agent procedures live in `workflows/research/skills/`, and project records can start from `workflows/research/templates/`. A fictional example shows how those pieces connect.
 
 ## Principles
 

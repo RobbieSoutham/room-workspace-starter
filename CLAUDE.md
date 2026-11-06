@@ -8,6 +8,8 @@ This repository separates work into rooms under `workflows/`. Route each task to
 
 Read `ROOMS.md` and the selected room's `CONTEXT.md` first. Read its `CURRENT.md` for active tasks, and consult `SOURCE_OF_TRUTH.md` before updating facts that may have another canonical home. Load only the additional material needed for the task.
 
+Room-local skills are listed in the active room's `CONTEXT.md` and stored at `workflows/<room>/skills/<skill-name>/SKILL.md`. Read a skill when it applies. Keep durable policy in the room's `knowledge/` and link to that source instead of copying it into the skill.
+
 ## Writing rules
 
 - Keep `CONTEXT.md` stable: purpose, boundaries, conventions and file locations.
