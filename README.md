@@ -4,17 +4,20 @@ A small template for keeping agent instructions, room context, current work and 
 
 ## Start here
 
-1. Read `AGENTS.md`, then `CLAUDE.md`.
-2. Rename, add or remove the example rooms under `workflows/` to fit your work.
-3. Give each room a short `CONTEXT.md` and a frequently updated `CURRENT.md`.
-4. Record durable facts in that room's `knowledge/`; keep dated working material elsewhere in the room.
-5. Update `ROOMS.md` and `SOURCE_OF_TRUTH.md` when ownership changes.
+1. Read `AGENTS.md`, `CLAUDE.md`, `SOUL.md` and `USER.md`.
+2. Replace the prompts in `USER.md` with only the stable preferences that are useful to this workspace; remove unused fields.
+3. Rename, add or remove the example rooms under `workflows/` to fit your work.
+4. Give each room a short `CONTEXT.md` and a frequently updated `CURRENT.md`.
+5. Record durable facts in that room's `knowledge/`; keep dated working material elsewhere in the room.
+6. Update `ROOMS.md` and `SOURCE_OF_TRUTH.md` when ownership changes.
 
 ## Layout
 
 ```text
 AGENTS.md                 Entry point for coding agents
-CLAUDE.md                 Shared workspace rules and room routing
+CLAUDE.md                 Workspace rules, context-loading and ownership
+SOUL.md                   Assistant values and working defaults
+USER.md                   Editable, non-sensitive user preferences
 ROOMS.md                  Room names, purpose and boundaries
 SOURCE_OF_TRUTH.md        Canonical location for each kind of information
 SKILLS.md                 Complete global and room-local skill index
@@ -37,6 +40,7 @@ Each room has its own context, source-of-truth knowledge and relevant skills. Gl
 
 - Keep one canonical home for each fact and link to it elsewhere.
 - Keep this workspace template separate from project source repositories; see `REPOSITORIES.md`.
+- Load `SOUL.md` and `USER.md` and apply them throughout the task.
 - Load the relevant room context before acting; load other rooms only when needed.
 - Keep credentials, personal data and machine-specific state out of Git.
 - Prefer short, maintained source-of-truth documents over duplicated summaries.

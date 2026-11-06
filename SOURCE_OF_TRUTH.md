@@ -4,6 +4,8 @@ Each topic should have one canonical home. Other documents should link to it rat
 
 | Information | Canonical location | Update rule |
 |---|---|---|
+| Assistant working values and behaviour defaults | `SOUL.md` | Update when shared agent behaviour expectations change; does not override higher-priority instructions or explicit user requests |
+| Stable user preferences | `USER.md` | Keep brief and non-sensitive; update when preferences change; do not use for active project status |
 | Room purpose, boundaries and conventions | `workflows/<room>/CONTEXT.md` | Change when the room's remit or conventions change |
 | Active work and next steps | `workflows/<room>/CURRENT.md` | Update as work starts, changes or completes |
 | Durable room knowledge | `workflows/<room>/knowledge/` | Add only reusable facts, decisions and procedures |
