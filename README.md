@@ -17,6 +17,7 @@ AGENTS.md                 Entry point for coding agents
 CLAUDE.md                 Shared workspace rules and room routing
 ROOMS.md                  Room names, purpose and boundaries
 SOURCE_OF_TRUTH.md        Canonical location for each kind of information
+REPOSITORIES.md           How workspace and project repositories relate
 MEMORY.md                 Small, durable cross-room facts
 PROTOCOLS.md              Versioned procedures and decision rules
 workflows/<room>/
@@ -31,6 +32,7 @@ The example rooms are `operations`, `research` and `projects`. They are placehol
 ## Principles
 
 - Keep one canonical home for each fact and link to it elsewhere.
+- Keep this workspace template separate from project source repositories; see `REPOSITORIES.md`.
 - Load the relevant room context before acting; load other rooms only when needed.
 - Keep credentials, personal data and machine-specific state out of Git.
 - Prefer short, maintained source-of-truth documents over duplicated summaries.
