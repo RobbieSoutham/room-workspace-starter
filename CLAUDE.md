@@ -51,7 +51,7 @@ Use this order, skipping items that are irrelevant to the task:
 
 Use the lightest reliable process. Make reversible, low-impact choices directly when the user has authorised the task. Slow down for decisions involving safety, privacy, research integrity, substantial cost, shared services, publication, access or irreversible effects.
 
-### Ordered engineering and process review
+### Ordered engineering and process review (Elon's five-step heuristic)
 
 For design, engineering and operational-process changes, use this sequence when it fits:
 
@@ -60,10 +60,6 @@ For design, engineering and operational-process changes, use this sequence when 
 3. **Simplify or optimise what remains.** Reduce complexity only after confirming the remaining parts are needed.
 4. **Accelerate the cycle.** Shorten feedback and delivery time only after the process is valid and sufficiently simple.
 5. **Automate stable repetition.** Automate only when the steps, inputs, outcomes, ownership and failure recovery are understood.
-
-This is Elon Musk's five-step engineering heuristic, described during his 2021 Starbase interview with Tim Dodd: [interview video](https://www.youtube.com/watch?v=t705r8ICkRw) and [interviewer's recap](https://everydayastronaut.com/starbase-tour-and-interview-with-elon-musk/). It is a heuristic, not a universal law, evidence of correctness, or permission to remove safeguards. Apply it proportionately; for scientific or high-consequence work, preserve controls and evidence even when they add steps.
-
-Do not optimise a process before confirming that it needs to exist. Do not accelerate or automate a process whose requirements, failure modes or recovery path are unresolved. For an ordinary task, the sequence can be a quick mental check; do not create a ceremony or document unless it helps the decision.
 
 ### Reasoning, risk and delegation
 
