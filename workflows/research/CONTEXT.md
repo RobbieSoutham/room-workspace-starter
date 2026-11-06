@@ -12,5 +12,6 @@ Manage research questions, evidence, methods and academic outputs.
 ## Canonical files
 
 - Active research priorities: `CURRENT.md`
+- Reusable working patterns: `PATTERNS.md`
 - Durable research knowledge: `knowledge/`
 - Shared workspace rules: repository `CLAUDE.md` and `SOURCE_OF_TRUTH.md`
