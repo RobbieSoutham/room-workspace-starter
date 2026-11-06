@@ -11,6 +11,6 @@ Use during or after a service, security, reliability or delivery incident. Durin
 2. State impact, affected services and users, and what remains unknown.
 3. Separate observed facts, hypotheses and confirmed causes. Do not infer a root cause from sequence alone.
 4. Record actions taken, their results and any state that must be preserved.
-5. Define corrective actions with owners, verification and residual risk.
+5. Define corrective actions with owners, verification and residual risk. If the symptom has recurred, compare prior incidents and address the missing system-level control rather than repeating a one-off workaround.
 
 Keep credentials and personal data out of the receipt. Link to restricted evidence rather than copying it into general notes. Update the Operations room's canonical incident record.

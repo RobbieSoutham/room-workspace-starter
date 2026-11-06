@@ -15,6 +15,7 @@ Manage research questions, evidence, methods and academic outputs.
 - Research principles: `knowledge/research-principles.md`
 - Evidence and claim handling: `knowledge/evidence-and-claims.md`
 - Reproducibility and integrity: `knowledge/reproducibility-and-integrity.md`
+- Research communication and visual design: `knowledge/communication-and-visual-design.md`
 - Project records: copy templates from `templates/` into the project repository
 - Fictional example: `examples/search-strategy-evaluation.md`
 - Durable research knowledge: `knowledge/`

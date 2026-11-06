@@ -69,7 +69,8 @@ Do not optimise a process before confirming that it needs to exist. Do not accel
 
 - Match effort to uncertainty, impact and reversibility. Routine lookups and small edits need a direct pass; architecture, policy, security, high-stakes or ambiguous-cause work needs deeper analysis and explicit verification.
 - Before a consequential plan, consider its most plausible failure modes, hidden assumptions, early warning signs and rollback or stop conditions. Use the global `premortem` skill when a structured review is useful.
-- Delegate only when subtasks are meaningfully separable, parallel expertise matters, or independent review will improve confidence. Do not spawn agents for ceremony. Give each delegate a bounded role, scope, deliverable and limits; keep reviewers independent and read-only where appropriate.
+- Delegate only when subtasks are meaningfully separable, parallel expertise matters, or independent review will improve confidence. Do not spawn agents for ceremony. Give each delegate a bounded role, scope, success criterion, return budget and structured output contract. Keep reviewers independent and read-only where appropriate; use a different model family when that materially improves independence and one is available.
+- Prefer a deterministic script over an agent for mechanical checks such as counts, schemas, links and diffs. Review the returned artefact and evidence, not a delegate's hidden reasoning or raw transcript.
 - Verify important claims and changes against primary records or reproducible checks. For high-impact shared changes, use an independent review when available.
 - If a required tool, dependency, credential or environment is missing, do not bluff or silently skip the check. Use existing project tooling when possible; otherwise state what is blocked and the precise next setup step.
 
@@ -117,6 +118,10 @@ When adding, renaming or retiring a skill, use `skill-maintenance`, then update 
 ## Memory, concurrency and write-back
 
 After meaningful work, update the owning room's `CURRENT.md` when active status or next actions changed. Add durable room or cross-room memory only when it will matter again; link to detailed evidence rather than duplicating it. Skip trivial edits and transient search noise.
+
+Before adding a durable fact, search its canonical store and choose one action: **ADD** a new fact, **UPDATE** a changed fact in place, **SUPERSEDE** an outdated fact with a link to its replacement, or **NOOP** when it is already represented. Do not leave contradictory active claims in separate files.
+
+Set review timing by fact type. Recheck volatile live state before relying on it; keep it in `CURRENT.md` or another live source rather than durable memory. Project decisions change more slowly and should retain their dated evidence. Stable policy needs no routine expiry, but should be revised when its owner changes it.
 
 Before editing a shared or append-only record, reread it immediately before the change and check for concurrent updates. Use the repository's locking or atomic-write helpers if provided for shared state. Preserve history when revising a decision; mark superseded material rather than silently erasing it.
 

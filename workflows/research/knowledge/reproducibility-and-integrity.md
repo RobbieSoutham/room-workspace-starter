@@ -33,6 +33,8 @@ Keep personal, confidential or restricted materials out of public repositories a
 
 ## Tools and reporting
 
+For iterative computational experiments, identify each reported metric and its units or scale, run/version, observation time and completed step. Keep the latest observation distinct from a best or selected result. Preserve unavailable historical values as gaps; do not infer them or rerun archived work merely to backfill a report without the project owner's authority.
+
 For computational work, make a fresh run from documented inputs where practical and check important outputs against an independent calculation, baseline or scientific oracle when available. For interpretive work, make the path from source material to interpretation inspectable within the permissions that apply.
 
 If AI or automated tools assist research, verify their output against sources and actual results. Verify every citation, protect confidential input, and follow institutional, funder and publisher rules on disclosure and use. Record enough detail for the project to explain how tool output was checked.
