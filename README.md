@@ -21,7 +21,6 @@ USER.md                   Editable, non-sensitive user preferences
 ROOMS.md                  Room names, purpose and boundaries
 SOURCE_OF_TRUTH.md        Canonical location for each kind of information
 SKILLS.md                 Complete global and room-local skill index
-REPOSITORIES.md           How workspace and project repositories relate
 MEMORY.md                 Small, durable cross-room facts
 PROTOCOLS.md              Versioned procedures and decision rules
 skills/<skill>/SKILL.md   Reusable procedures available across rooms
@@ -31,6 +30,7 @@ workflows/<room>/
   knowledge/README.md     Index and rules for room-owned knowledge
   skills/<skill>/SKILL.md  Room-local procedures for agents
   memory/                 Room-specific durable notes
+projects/<project>/       Independent project repository as a Git submodule
 ```
 
 The example rooms are `operations`, `research` and `projects`. They are placeholders; adapt them freely.
@@ -39,7 +39,7 @@ Each room has its own context, source-of-truth knowledge and relevant skills. Gl
 ## Principles
 
 - Keep one canonical home for each fact and link to it elsewhere.
-- Keep this workspace template separate from project source repositories; see `REPOSITORIES.md`.
+- Keep project source in `projects/<name>/` Git submodules; each project has its own history and remote. See `CLAUDE.md` for the workflow.
 - Load `SOUL.md` and `USER.md` and apply them throughout the task.
 - Load the relevant room context before acting; load other rooms only when needed.
 - Keep credentials, personal data and machine-specific state out of Git.

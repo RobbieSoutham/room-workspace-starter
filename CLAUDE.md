@@ -1,92 +1,139 @@
 # Workspace instructions for Claude
 
-This repository is a shared work environment organised into three rooms: **Operations**, **Research** and **Projects**. It is a generic starter: adapt the room names, owners and procedures to the people using it, and keep private or machine-specific material out of the repository.
+This repository coordinates shared work through three rooms: Operations, Research and Projects. Treat these instructions as the workspace operating rules. Adapt names and examples to the host environment without adding personal, account-specific or machine-specific details.
 
 ## Identity and user preferences
 
-At the start of work in this repository, read `SOUL.md` and `USER.md` as well as these workspace instructions. Apply `SOUL.md` as the assistant's working values and `USER.md` as the current user's stable preferences. This is operational guidance: reflect it in how you investigate, decide, write and report; do not merely acknowledge the files.
+At the start of a session in this workspace, read `SOUL.md` and `USER.md`. Read this file as well. Apply the values and preferences throughout the task; do not merely acknowledge them.
 
-Keep the distinction clear:
+- `SOUL.md` describes the assistant's working values and default behaviour.
+- `USER.md` records concise, stable preferences of the current user.
+- Room `CONTEXT.md` and `CURRENT.md` define the domain boundary and active state.
+- `SOURCE_OF_TRUTH.md` maps durable information to its canonical home.
 
-- `SOUL.md` describes how the assistant should work across tasks.
-- `USER.md` describes stable preferences of the person being helped.
-- Room `CONTEXT.md` and `CURRENT.md` describe domain boundaries and active work.
-- `SOURCE_OF_TRUTH.md` identifies where durable facts and decisions belong.
+System and safety requirements take precedence. Follow the user's explicit instruction for the current task, then the applicable workspace and room rules. Use `SOUL.md` and `USER.md` as defaults where no more specific instruction applies. Do not infer missing personal details or treat `USER.md` as an authority for project status.
 
-When guidance conflicts, follow system and safety requirements first, then the user's explicit instruction for the current task. Apply this repository's rules and room constraints, then use `SOUL.md` and `USER.md` as defaults where the user has not specified otherwise. Never infer personal details to fill an empty `USER.md` field.
+Be direct, resourceful and accurate. Investigate available context before asking questions. State what is observed, inferred or unknown; never claim a check or action that did not happen. Surface material risks in proportion to the task. Keep private information private and report the useful result, not a transcript of the work.
 
-In practice, investigate available context before asking, use direct and proportionate language, distinguish evidence from inference, state material uncertainty, and report only actions or checks actually completed. Keep external or destructive actions within the authorisation rules below.
+## Room routing
 
-## 1. Choose the room and respect its boundary
+### Resolve the room before acting
 
-If your host explicitly binds you to a room, follow that binding. Otherwise route by the work's primary owner:
+First honour any room binding supplied by the host environment. If your agent identity or conversation is bound to a room, work there and reply through that same conversation. Do not switch rooms unless the user asks or the task genuinely requires cross-room work. Your first room-specific read is that room's `CONTEXT.md`.
+
+If there is no binding, route by the work's primary owner:
 
 | Work | Room |
 |---|---|
-| Shared tools, reliability, security and operating procedures | `workflows/operations/` |
-| Research questions, methods, evidence and scholarly outputs | `workflows/research/` |
-| Products, delivery and projects without a more specific owner | `workflows/projects/` |
+| Shared workspace, tools, reliability, security and operating procedures | `workflows/operations/` |
+| Research questions, evidence, methods, analysis and scholarly outputs | `workflows/research/` |
+| Product, business and project intake or delivery coordination | `workflows/projects/` |
 
-Read that room's `CONTEXT.md` before acting. Stay in the selected room unless the user requests cross-room work or the work genuinely affects another room. For cross-room work, name the rooms and keep each fact in its owning source.
+A host may use room-specific agent clones and an unbound coordinator. Keep the mapping from host agent identifiers to these room names in the host's own configuration or its local `AGENTS.md`; do not put private account IDs, chat IDs or machine paths in this generic repository. The coordinator routes by task type, and hands off to a room owner only when delegation is useful and available.
 
-## 2. Load context in this order
+For cross-room work, identify the affected rooms, keep each artifact in its owning source and update ownership documentation if the canonical owner changes. Do not copy one room's whole context into another.
 
-1. `AGENTS.md` for the repository entry point and environment-specific rules.
-2. `SOUL.md` and `USER.md` for working values and stable user preferences.
-3. `ROOMS.md` and the selected room's `CONTEXT.md` for ownership and boundaries.
-4. The selected room's `CURRENT.md` when active status, prior decisions or next actions matter.
-5. `SOURCE_OF_TRUTH.md` before creating or editing durable information.
-6. `SKILLS.md`, then only the one or two skills relevant to the task.
-7. The referenced knowledge, protocol, template or project record needed for the work.
-Do not load every room, memory file or skill by default. A room's `CONTEXT.md` explains its remit; `CURRENT.md` is its short-lived active state, not a durable policy document.
+### Load context selectively
 
-## 3. Preserve canonical ownership
+Use this order, skipping items that are irrelevant to the task:
 
-Use `SOURCE_OF_TRUTH.md` to resolve where information belongs. The normal pattern is:
+1. `AGENTS.md` for host or repository-specific entry instructions.
+2. `CLAUDE.md`, `SOUL.md` and `USER.md` for workspace rules, assistant behaviour and user preferences.
+3. `ROOMS.md` and the selected room's `CONTEXT.md` for room ownership and boundaries.
+4. That room's `CURRENT.md` when active work, prior decisions or next actions matter.
+5. `SOURCE_OF_TRUTH.md` before creating or changing durable information.
+6. `SKILLS.md` and only the skill or skills directly relevant to the task.
+7. The specific knowledge files, protocols, project records or references needed to do the work.
 
-- `SOUL.md`: workspace-wide assistant values and working defaults.
-- `USER.md`: concise, stable user preferences; not task status or sensitive profile storage.
-- `workflows/<room>/CONTEXT.md`: stable purpose, boundaries, conventions and pointers.
-- `workflows/<room>/CURRENT.md`: concise active work, status and next actions.
-- `workflows/<room>/knowledge/`: durable reusable facts, decisions and room procedures.
-- `workflows/<room>/skills/<skill>/SKILL.md`: task workflows specific to that room.
-- `skills/<skill>/SKILL.md`: reusable workflows that apply across rooms.
-- `PROTOCOLS.md`: procedures shared by multiple rooms.
-- `MEMORY.md`: brief cross-room facts that link to the canonical record.
-- Project repositories: project-specific code, datasets, evidence and delivery records; see `REPOSITORIES.md`.
+`CONTEXT.md` is a stable room definition. `CURRENT.md` is a concise active-state note, not a history dump. Read `MEMORY.md`, room memory, `PROTOCOLS.md` or a `HEARTBEAT.md` only when relevant. Do not recursively load all rooms, memory, skills or repositories by default. Prefer targeted search and bounded reads. For long work, keep a compact checkpoint of scope, evidence, changes, open questions and next steps in the room's working area when one exists.
 
-Prefer a link to the canonical source over a copied summary. When a source-of-truth owner changes, update `SOURCE_OF_TRUTH.md` and the relevant room context in the same change. Skills explain how to do recurring work; they do not override user instructions or replace policy documents.
+## Decision rules
 
-## 4. Use the starter and skills consistently
+Use the lightest reliable process. Make reversible, low-impact choices directly when the user has authorised the task. Slow down for decisions involving safety, privacy, research integrity, substantial cost, shared services, publication, access or irreversible effects.
 
-`SKILLS.md` is the complete index. Global skills are stored under `skills/`; room skills are under the owning room's `skills/` directory and should also be listed in that room's `CONTEXT.md`. Read a skill before invoking its procedure. If a task does not match a skill, proceed with ordinary judgement rather than forcing a workflow.
+### Ordered engineering and process review
 
-When adapting this starter for a new team:
+For design, engineering and operational-process changes, use this sequence when it fits:
 
-1. Rename, add or remove rooms and update `ROOMS.md`.
-2. Set each room's purpose, boundaries, canonical files and skills in `CONTEXT.md`.
-3. Keep `CURRENT.md` focused on active items, with owners and next actions where useful.
-4. Put durable facts and procedures into the correct `knowledge/` or shared protocol file.
-5. Update `SOURCE_OF_TRUTH.md`, `SKILLS.md` and links affected by the change.
-6. Remove example material that is not appropriate to the team's work; keep fictional examples clearly labelled.
+1. **Question the requirement.** Identify the intended outcome, who owns each constraint and why it exists. Separate a genuine requirement from inherited convention or an untested assumption.
+2. **Delete unnecessary parts or steps.** Remove work that does not serve the outcome. Preserve required safety controls, legal obligations, research evidence and recovery mechanisms.
+3. **Simplify or optimise what remains.** Reduce complexity only after confirming the remaining parts are needed.
+4. **Accelerate the cycle.** Shorten feedback and delivery time only after the process is valid and sufficiently simple.
+5. **Automate stable repetition.** Automate only when the steps, inputs, outcomes, ownership and failure recovery are understood.
 
-## 5. Protect data and repositories
+This is Elon Musk's five-step engineering heuristic, described during his 2021 Starbase interview with Tim Dodd: [interview video](https://www.youtube.com/watch?v=t705r8ICkRw) and [interviewer's recap](https://everydayastronaut.com/starbase-tour-and-interview-with-elon-musk/). It is a heuristic, not a universal law, evidence of correctness, or permission to remove safeguards. Apply it proportionately; for scientific or high-consequence work, preserve controls and evidence even when they add steps.
 
-Do not place credentials, tokens, private personal or customer data, restricted research data, raw private exports, virtual environments, dependency caches, databases, generated builds or machine-specific state in this starter. Keep project artifacts in their approved storage and use `.gitignore` as a supplement, not a substitute for checking the staged files.
+Do not optimise a process before confirming that it needs to exist. Do not accelerate or automate a process whose requirements, failure modes or recovery path are unresolved. For an ordinary task, the sequence can be a quick mental check; do not create a ceremony or document unless it helps the decision.
 
-Before committing, inspect `git status`, the full staged diff, file sizes and binary additions. Use available secret scanning for repository changes, especially before a public release. Keep third-party licences and attribution; do not grant a blanket licence unless contributors can do so. Follow `safe-release-review` before preparing an authorised release.
+### Reasoning, risk and delegation
 
-Treat publication, external communications, purchases, account changes and destructive actions as requiring explicit user authorisation. A plan or checklist does not grant that authorisation. Prefer reversible, scoped changes and leave unrelated work untouched.
+- Match effort to uncertainty, impact and reversibility. Routine lookups and small edits need a direct pass; architecture, policy, security, high-stakes or ambiguous-cause work needs deeper analysis and explicit verification.
+- Before a consequential plan, consider its most plausible failure modes, hidden assumptions, early warning signs and rollback or stop conditions. Use the global `premortem` skill when a structured review is useful.
+- Delegate only when subtasks are meaningfully separable, parallel expertise matters, or independent review will improve confidence. Do not spawn agents for ceremony. Give each delegate a bounded role, scope, deliverable and limits; keep reviewers independent and read-only where appropriate.
+- Verify important claims and changes against primary records or reproducible checks. For high-impact shared changes, use an independent review when available.
+- If a required tool, dependency, credential or environment is missing, do not bluff or silently skip the check. Use existing project tooling when possible; otherwise state what is blocked and the precise next setup step.
 
-## 6. Make work reviewable
+## Source-of-truth and file placement
 
-Use the lightest process that fits the task. Preserve prior records when changing durable decisions; record rationale and effective dates for shared procedures. Verify outcomes using checks suited to the change and report only checks actually performed. In the final handoff, state what changed, the canonical files involved, verification results, remaining uncertainty and any next decision.
+Follow `SOURCE_OF_TRUTH.md`. Keep one canonical home for each fact; link to it elsewhere instead of maintaining competing copies.
+
+- `workflows/<room>/CONTEXT.md`: room purpose, boundaries, conventions and pointers.
+- `workflows/<room>/CURRENT.md`: current priorities, status and next actions.
+- `workflows/<room>/knowledge/`: durable, reusable facts and decisions owned by that room.
+- `workflows/<room>/skills/` and `skills/`: room-local and cross-room task procedures.
+- `PROTOCOLS.md`: procedures shared across rooms, with version and effective date for material changes.
+- `MEMORY.md`: brief, durable facts shared across rooms, linked to their canonical sources.
+- `workflows/<room>/memory/` or `memory/`: durable room-level or dated session memory, according to the local convention. Keep it concise and do not use it as a task-status duplicate.
+- `projects/<project-name>/`: project repositories included as Git submodules. Their code, project-specific evidence, data references, decisions and delivery records belong in the project repository.
+
+`workflows/projects/` coordinates project intake and portfolio-level status; it is not a substitute for the project repository. Research templates under `workflows/research/templates/` are copied into the relevant project submodule and completed there. Keep restricted data in approved storage and link to it only where access is appropriate.
+
+### Project Git submodules
+
+Each project is an independent Git repository with its own remote, history, access controls and release decisions. Add it to this workspace as a submodule under `projects/<project-name>/`. The workspace repository tracks the submodule URL and commit pointer; it does not absorb the project's files or history.
+
+- Clone the workspace with submodules using `git clone --recurse-submodules <workspace-url>`; for an existing clone use `git submodule update --init --recursive`.
+- Add a project with `git submodule add <project-repository-url> projects/<project-name>` after confirming the intended remote and access.
+- Commit and push project changes from inside the project repository to its own remote. Then update and commit the submodule pointer in the workspace repository.
+- Before updating a submodule pointer, confirm the referenced project commit exists on the intended remote and is accessible to the workspace's intended users.
+- Never store credentials in submodule URLs. Do not push either repository unless authorised; publishing the workspace pointer does not publish an unpushed project commit.
+- Check the submodule's own status and diff. A clean workspace status does not prove submodule contents are committed or pushed.
+
+## Skills
+
+`SKILLS.md` is the complete skills index. Canonical skills live in `skills/<name>/SKILL.md` (global) and `workflows/<room>/skills/<name>/SKILL.md` (room-local). Read the relevant skill before following a recurring procedure. Skills implement policy; they do not override higher-priority instructions or replace canonical knowledge documents.
+
+When adding, renaming or retiring a skill, use `skill-maintenance`, then update `SKILLS.md` and the owning room's `CONTEXT.md`. If a platform needs native skill registration or symlinks, keep the workspace skill as the single source and document the bridge in host-specific instructions.
+
+## Data, storage and safety
+
+- Keep credentials, tokens, private personal or customer data, restricted research data, raw private exports, virtual environments, dependency caches, databases, generated builds and machine-specific state out of this public starter repository.
+- Store project-specific code and records in the project's submodule. Put large or restricted data in approved storage and keep only permitted references, metadata or reproducible acquisition instructions in Git.
+- Before committing, inspect status, staged changes, file sizes, binary files and submodule pointers. Use `.gitignore` as a supplement, not as a substitute for reviewing staged content. Run secret scanning when available, especially before publication.
+- Respect third-party licences and attribution. Do not add a blanket licence unless all contributors have authority to grant it.
+- Treat publication, external messages, purchases, account changes, permission changes and destructive actions as requiring explicit user authorisation. A plan or checklist is not approval.
+- Prefer scoped and reversible changes. Preserve unrelated work, historical records, user data and active sessions. Do not terminate access paths or services unless the task authorises it.
+
+## Memory, concurrency and write-back
+
+After meaningful work, update the owning room's `CURRENT.md` when active status or next actions changed. Add durable room or cross-room memory only when it will matter again; link to detailed evidence rather than duplicating it. Skip trivial edits and transient search noise.
+
+Before editing a shared or append-only record, reread it immediately before the change and check for concurrent updates. Use the repository's locking or atomic-write helpers if provided for shared state. Preserve history when revising a decision; mark superseded material rather than silently erasing it.
+
+## Writing and final handoff
+
+Use the language, spelling and formatting requested by the user or recorded in `USER.md`. If neither specifies a preference, match the user's language and use clear, consistent spelling. Keep prose direct and make technical terms understandable in context.
+
+In the final handoff, state what changed, where the canonical result lives, what checks actually ran, material limits or uncertainty, and any decision still needed. Do not repeat the whole work log.
+
+## Heartbeats and scheduled work
+
+For a heartbeat request, read `HEARTBEAT.md` and perform only the checks or actions it specifies or clearly implies. If no action is needed, return the host's designated no-op response. Use scheduled jobs for exact timing; use heartbeat work only for lightweight periodic review. Do not start a service or scheduled process merely to make a check appear green.
 
 ## Repository map
 
-- `workflows/operations/` owns shared workspace and service operations.
-- `workflows/research/` owns reusable research practice, with generic templates and a fictional example.
-- `workflows/projects/` owns shared project intake and delivery coordination.
-- `REPOSITORIES.md` explains when project work belongs in a separate repository.
-- `SOURCE_OF_TRUTH.md` and `SKILLS.md` are the authoritative indexes for file ownership and reusable procedures.
-- `SOUL.md` and `USER.md` shape how the agent works; they do not duplicate room knowledge or active status.
+- `workflows/operations/` owns shared workspace operations.
+- `workflows/research/` owns reusable research principles, templates and research skills.
+- `workflows/projects/` owns project intake and shared delivery coordination.
+- `projects/<project-name>/` contains independently maintained project repositories as Git submodules.
+- `SOURCE_OF_TRUTH.md` and `SKILLS.md` map canonical ownership and reusable procedures.

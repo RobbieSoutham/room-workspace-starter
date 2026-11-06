@@ -17,6 +17,6 @@ Each topic should have one canonical home. Other documents should link to it rat
 | Cross-room durable memory | `MEMORY.md` | Keep brief; link to room-owned sources |
 | Shared procedures and decision rules | `PROTOCOLS.md` | Version material changes and record the effective date |
 | Room names and ownership | `ROOMS.md` | Update when rooms are added, renamed or re-scoped |
-| Project repository boundaries and component versioning | `REPOSITORIES.md` and the project's own repository metadata | Keep project source out of this workspace template |
+| Project code, data references, evidence and delivery records | `projects/<project-name>/` Git submodule and its own repository records | Commit and push project work to its own remote; this repository tracks only the submodule pointer |
 
 If ownership is unclear, do not silently create a second canonical copy. Resolve the owner, then update this map.
