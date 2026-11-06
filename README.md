@@ -17,9 +17,11 @@ AGENTS.md                 Entry point for coding agents
 CLAUDE.md                 Shared workspace rules and room routing
 ROOMS.md                  Room names, purpose and boundaries
 SOURCE_OF_TRUTH.md        Canonical location for each kind of information
+SKILLS.md                 Complete global and room-local skill index
 REPOSITORIES.md           How workspace and project repositories relate
 MEMORY.md                 Small, durable cross-room facts
 PROTOCOLS.md              Versioned procedures and decision rules
+skills/<skill>/SKILL.md   Reusable procedures available across rooms
 workflows/<room>/
   CONTEXT.md              Room identity, conventions and boundaries
   CURRENT.md              Active state and next actions
@@ -29,7 +31,7 @@ workflows/<room>/
 ```
 
 The example rooms are `operations`, `research` and `projects`. They are placeholders; adapt them freely.
-The Research room shows how practice is maintained: canonical principles and standards live in `workflows/research/knowledge/`, agent procedures live in `workflows/research/skills/`, and project records can start from `workflows/research/templates/`. A fictional example shows how those pieces connect.
+Each room has its own context, source-of-truth knowledge and relevant skills. Global skills in `skills/` apply across rooms; `SKILLS.md` indexes both sets. The Research room demonstrates the arrangement with canonical evidence and methods documents, skills and project templates.
 
 ## Principles
 

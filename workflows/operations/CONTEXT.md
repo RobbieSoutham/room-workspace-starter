@@ -14,3 +14,12 @@ Maintain shared workspace tools, reliability and operating procedures.
 - Active operations work: `CURRENT.md`
 - Durable operations knowledge: `knowledge/`
 - Cross-room procedures: repository `PROTOCOLS.md`
+
+## Room skills
+
+- `incident-review` — document incidents from evidence through follow-up
+- `change-planning` — scope operational changes, validation and rollback
+- `service-health-review` — assess service health and distinguish observations from assumptions
+- `capacity-and-cost-review` — compare resource needs and operating costs before changes
+
+Global skills are indexed in repository `SKILLS.md`.

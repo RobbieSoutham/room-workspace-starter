@@ -26,5 +26,9 @@ Manage research questions, evidence, methods and academic outputs.
 - `evidence-led-review` — plan and synthesise a literature review with a traceable search and evidence record
 - `research-protocol` — specify a method, analysis plan, reproducibility details and deviations before claim-bearing work
 - `claim-evidence-audit` — check whether citations and evidence support the wording and scope of claims
+- `research-question-development` — turn a broad topic into a focused, answerable question
+- `literature-synthesis` — compare an identified source set into themes, disagreements and gaps
+- `manuscript-review` — review argument, method reporting and claim calibration
+- `research-communication` — adapt established research for a named audience and format
 
 Skills implement the canonical documents above; they do not establish separate research policy.

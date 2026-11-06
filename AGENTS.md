@@ -9,4 +9,4 @@ Before working in this repository:
 
 Keep work inside the selected room unless the user asks for a cross-room change. Do not copy private or machine-specific information into this template. Ask before actions that publish data, contact external services or destroy user data.
 
-Room-local agent skills live at `workflows/<room>/skills/<skill-name>/SKILL.md`. Find them through the room's `CONTEXT.md`; read a relevant skill before using it.
+The complete skills index is `SKILLS.md`. Global skills live at `skills/<skill-name>/SKILL.md`; room-local skills live at `workflows/<room>/skills/<skill-name>/SKILL.md` and are listed in the room's `CONTEXT.md`. Read a relevant skill before using it.
