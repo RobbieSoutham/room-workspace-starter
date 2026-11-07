@@ -24,4 +24,4 @@ This register indexes active, reusable protocols in the workspace. They may appl
 4. Mark a proposal `candidate` until it has been reviewed and deliberately adopted. Do not call a dated experiment or project-only protocol active for every room.
 5. Review time-sensitive protocols against their current implementation and evidence. If freshness is unknown, mark the entry `needs review` instead of implying it is current.
 
-This generic starter excludes host-specific routing/model policy, personal data, project-only protocols and experimental procedures that have not been promoted. Add only rules a future user can safely apply after adapting the named owner and project boundaries.
+This starter preserves the working routing and review design in `config/ai/` while omitting personal identifiers, credentials, endpoints, balances, host paths and project-only research state. Recheck access and model availability for each host before applying the routes. Keep experimental procedures marked as candidates until reviewed and deliberately promoted.

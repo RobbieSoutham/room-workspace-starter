@@ -1,0 +1,178 @@
+schema_version: 1
+last_updated: "2026-11-07"
+purpose: >
+  Workspace model inventory and routing-role source of truth. Provider model IDs
+  and roles reflect the current room-based setup; live entitlement, quota and
+  exact runtime dispatch must still be checked before each launch.
+benchmark_policy: >
+  Live public leaderboards are dated shortlisting evidence, not routing proof.
+  A role promotion requires a representative local evaluation with matched
+  tools, harness, prompts, cost, failure analysis and a human or deterministic
+  baseline.
+default_route:
+  model: "openai-codex/gpt-5.5"
+  provider: "openai-codex"
+  fallback_models: []
+  status: "active_default"
+  note: "The native Codex route is flat; other families are deliberate opt-in lanes, not automatic fallbacks."
+
+models:
+  - id: "gpt-5.5"
+    aliases: ["GPT-5.5", "openai-codex/gpt-5.5"]
+    provider: "openai"
+    access_surface: "native Codex subscription route"
+    route_status: "active_default_and_heavy_worker"
+    roles: ["default agent", "heavy implementation", "tool-heavy execution"]
+    constraints: ["No automatic model fallback", "Check live entitlement and quota before a long run"]
+
+  - id: "gpt-5.6-sol"
+    aliases: ["GPT-5.6 Sol", "gpt-5.6-sol-xhigh"]
+    provider: "openai"
+    access_surface: "explicit Codex route when entitled"
+    route_status: "legacy_catalog_entry_recheck_before_use"
+    roles: ["architecture and complex planning", "final red-team", "multi-agent conflict resolution", "senior research synthesis"]
+    constraints: ["Not the current high-end Codex route", "Recheck exact availability before use", "Do not treat old policy references as current access evidence"]
+
+  - id: "gpt-6.1-sol"
+    aliases: ["GPT-6.1 Sol", "gpt-6.1-sol-xhigh"]
+    provider: "openai"
+    access_surface: "explicit native Codex Pro route when entitled"
+    route_status: "available_as_explicit_high_end_route"
+    roles: ["architecture and complex planning", "final red-team", "senior research synthesis"]
+    constraints: ["Explicit selection only", "Fresh entitlement and quota check", "No automatic fallback from the flat default"]
+
+  - id: "gpt-6-astra"
+    aliases: ["GPT-6 Astra", "gpt-6-astra"]
+    provider: "openai"
+    access_surface: "explicit native Codex Pro route when entitled"
+    route_status: "available_as_explicit_high_end_route"
+    roles: ["complex reasoning option", "bounded alternate to GPT-6.1 Sol"]
+    constraints: ["Same-family output is not an independent verifier", "Fresh entitlement and quota check", "No automatic fallback"]
+
+  - id: "claude-opus-5.5"
+    aliases: ["Opus 5.5", "claude-opus-5-5"]
+    provider: "anthropic"
+    access_surface: "native Claude CLI subscription"
+    route_status: "protected_specialist"
+    roles: ["deliberate specialist judgement", "material-disagreement adjudication"]
+    launch_gates: ["Fresh native account and usage preflight", "Exact requested and executed model evidence", "Bounded brief"]
+    disallowed_roles: ["routine worker", "bulk reader", "summariser", "formatter", "standing council"]
+
+  - id: "claude-sonnet-5.5"
+    aliases: ["Sonnet 5.5", "claude-sonnet-5-5"]
+    provider: "anthropic"
+    access_surface: "native Claude CLI subscription"
+    route_status: "opt_in_cross_family_redundancy"
+    roles: ["independent audit when GPT usage is high", "bounded second opinion"]
+    constraints: ["Do not treat a second model as independent evidence without checking shared sources, prompt and tools"]
+
+  - id: "gpt-5.4"
+    aliases: ["GPT-5.4", "research_agent"]
+    provider: "openai"
+    access_surface: "Codex-compatible research-agent route"
+    route_status: "task_specific"
+    roles: ["bounded source gathering before senior synthesis"]
+    constraints: ["Keep retrieval evidence and model synthesis separate"]
+
+  - id: "gpt-5.4-mini"
+    aliases: ["GPT-5.4 Mini", "cheaper_coding_agent"]
+    provider: "openai"
+    access_surface: "Codex-compatible worker route"
+    route_status: "task_specific_cost_route"
+    roles: ["routine scoped code edits"]
+    constraints: ["Use deterministic checks and human review for material changes"]
+
+  - id: "gpt-5.4-nano"
+    aliases: ["GPT-5.4 Nano", "cheap_summarizer"]
+    provider: "openai"
+    access_surface: "Codex-compatible worker route"
+    route_status: "task_specific_low_cost_route"
+    roles: ["first-pass extraction and summaries"]
+    constraints: ["Never use as the sole verifier or final scientific judge"]
+
+  - id: "gemini-4-argon"
+    aliases: ["Gemini 4 Argon", "gemini-4-argon-low", "gemini-4-argon-high"]
+    provider: "google"
+    access_surface: "Google AI Pro and official Antigravity product"
+    route_status: "direct_product_access_only"
+    roles: ["direct interactive model use"]
+    constraints: ["Do not drive subscription quota through another agent until current provider terms are confirmed", "Not a headless route in the default agent stack"]
+
+  - id: "groq/openai/gpt-oss-120b"
+    aliases: ["Groq gpt-oss-120b"]
+    provider: "groq"
+    access_surface: "free API tier"
+    route_status: "manual_public_grunt_lane"
+    roles: ["low-stakes public-data tasks"]
+    permitted_data: ["public, non-sensitive work"]
+    constraints: ["Account rate limits vary", "Not a verifier or scientific judge"]
+
+  - id: "groq/qwen/qwen3.8-27b"
+    aliases: ["Groq Qwen3.8-27B"]
+    provider: "groq"
+    access_surface: "free API tier"
+    route_status: "manual_public_grunt_lane"
+    roles: ["low-stakes public-data tasks"]
+    permitted_data: ["public, non-sensitive work"]
+    constraints: ["Account rate limits vary", "Not a verifier or scientific judge"]
+
+  - id: "vercel-ai-gateway/openai/gpt-oss-120b"
+    aliases: ["Vercel AI Gateway gpt-oss-120b"]
+    provider: "vercel-ai-gateway"
+    access_surface: "monthly gateway credit / provider billing"
+    route_status: "manual_public_grunt_fallback"
+    roles: ["low-stakes public-data tasks when the direct free route is unavailable"]
+    permitted_data: ["public, non-sensitive work"]
+    constraints: ["The monthly credit and model availability are volatile", "Do not inherit gateway automatic fallback behaviour for research claims"]
+
+  - id: "agentrouter/gpt-6.1-sol"
+    aliases: ["AgentRouter GPT-6.1 Sol"]
+    provider: "third-party relay"
+    access_surface: "manual Codex CLI relay"
+    route_status: "manual_public_code_only"
+    roles: ["public code tasks"]
+    permitted_data: ["public, non-sensitive code only"]
+    constraints: ["Third-party relay", "Read-only sandbox and minimal context", "Never a verifier, judge, default or automatic fallback"]
+
+  - id: "kimi-k2.6"
+    aliases: ["Kimi K2.6", "fourth_family_verifier"]
+    provider: "moonshot"
+    access_surface: "opt-in Azure AI deployment"
+    route_status: "manual_cross_family_verifier"
+    roles: ["independent public-data critic"]
+    permitted_data: ["public, non-sensitive work"]
+    constraints: ["Level 1–2 data only", "Not an automatic fallback", "Verifier output is fallible"]
+
+  - id: "deepseek-v3.2-speciale"
+    aliases: ["DeepSeek V3.2 Speciale", "fourth_family_verifier_alternate"]
+    provider: "deepseek"
+    access_surface: "opt-in Azure AI deployment"
+    route_status: "manual_cross_family_verifier_alternate"
+    roles: ["independent public-data critic"]
+    permitted_data: ["public, non-sensitive work"]
+    constraints: ["Level 1–2 data only", "Not an automatic fallback", "Verifier output is fallible"]
+
+  - id: "fable-family"
+    aliases: ["Fable", "Claude Fable"]
+    provider: "anthropic"
+    route_status: "prohibited_by_workspace_policy"
+    roles: []
+    constraints: ["Hard block across all roles and modes", "Do not add an exception or availability-based fallback"]
+
+deterministic_routes:
+  - "search and retrieval transforms"
+  - "token counting and context packing"
+  - "schema validation, linting and tests"
+  - "reproducible data transformations"
+
+credential_boundary:
+  rule: "Credentials, account IDs, endpoints, quota snapshots and local entitlement state are held in private runtime configuration, never in this catalog."
+  data_policy: "Do not send confidential, licensed, participant, health or unpublished work to a route unless the provider terms and institutional approvals explicitly allow it."
+
+live_benchmark_sources:
+  board: "docs/model-evaluation-and-benchmarks.md#live-benchmark-board"
+  broad_model_index: "https://artificialanalysis.ai/leaderboards/models"
+  human_preference: "https://arena.ai/leaderboard?tab=arena-elo"
+  science_literature_and_agents: "https://allenai-asta-bench-leaderboard.hf.space/"
+  project_level_science: "https://asibench.apexin.ai/leaderboard/"
+  checked: "2026-11-07"

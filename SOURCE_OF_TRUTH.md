@@ -13,9 +13,11 @@ Each topic should have one canonical home. Other documents should link to it rat
 | Room-specific agent procedures | `workflows/<room>/skills/<skill>/SKILL.md` | Keep scoped skills in their room; list each in that room's `CONTEXT.md` and in `SKILLS.md` |
 | Research principles and standards | `workflows/research/knowledge/research-principles.md`, `evidence-and-claims.md`, `reproducibility-and-integrity.md`, and `communication-and-visual-design.md` | Canonical research-room practice; change these before changing a skill that implements them |
 | Research procedures for agents | `workflows/research/skills/<skill>/SKILL.md` | Skills operationalise the research source-of-truth docs; link back instead of maintaining competing policy text |
-| Model/agent benchmark guidance and local evaluation records | `docs/model-evaluation-and-benchmarks.md` and the relevant project repository | Recheck benchmark versions and source dates; keep project-specific evaluation data, results and decisions with the project |
-| Model routing policy, evidence interpretation and change procedure | `docs/model-routing.md` | Separate public product facts, policy, execution receipts and local evaluation; version host-specific machine policy separately |
-| Model access types and offer comparison method | `docs/model-access-and-offers.md` | Verify current eligibility and terms at provider sources; keep personal account status and secrets local and untracked |
+| Model IDs, configured access surfaces and current workspace model roles | `config/ai/model_catalog.yaml` | Update when models or access surfaces change; no credentials, endpoints, account status or personal balances |
+| Current model routes, escalation, data rules and hard blocks | `config/ai/routing_policy.yaml` | Update after an approved route decision and preserve fresh admission, local evaluation and rollback requirements |
+| Routing rationale and model/provider setup explanation | `docs/model-routing.md` | Keep aligned with the machine-readable catalogue and policy |
+| Live benchmark links and dated leaderboard snapshots | `docs/model-evaluation-and-benchmarks.md` and the relevant project repository | Recheck the live boards monthly and after material releases; keep project evaluation data/results with the project |
+| Current promotions, subscriptions, credits and free-tier register | `docs/model-access-and-offers.md` | Weekly source-diff review plus a primary-source check; keep individual claim status, balances and credentials local and untracked |
 | Project question, protocol, evidence and deviations | The relevant project repository, using `workflows/research/templates/` | Copy and complete records in project context; do not store project data or findings in this generic starter |
 | Cross-room durable memory | `MEMORY.md` | Keep brief; link to room-owned sources |
 | Shared procedures and decision rules | `PROTOCOLS.md` | Version material changes and record the effective date |

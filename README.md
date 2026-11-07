@@ -24,6 +24,9 @@ SKILLS.md                 Complete global and room-local skill index
 MEMORY.md                 Small, durable cross-room facts
 PROTOCOLS.md              Versioned procedures and decision rules
 docs/                     Cross-room workflow documentation and source-backed guidance
+config/ai/
+  model_catalog.yaml       Model IDs, access surfaces, current roles and hard constraints
+  routing_policy.yaml      Active task lanes, escalation, protected routes and promotion gates
 skills/<skill>/SKILL.md   Reusable procedures available across rooms
 workflows/<room>/
   CONTEXT.md              Room identity, conventions and boundaries
@@ -36,9 +39,9 @@ projects/<project>/       Independent project repository as a Git submodule
 ```
 
 The example rooms are `operations`, `research` and `projects`. They are placeholders; adapt them freely.
-Each room has its own context, source-of-truth knowledge and relevant skills. Global skills in `skills/` apply across rooms; `SKILLS.md` indexes both sets. The starter preserves the working setup pattern: room routing, source-of-truth ownership, skill-based workflows, independent verification, empirical workflow improvement, cross-CLI/tool boundaries, scheduler and persistence guidance, model routing and benchmark evaluation, plus an official-source process for model offers. `docs/` explains how these parts fit together; adapt host-specific implementation details locally and remove account/private status rather than removing the reusable setup.
+Each room has its own context, source-of-truth knowledge and relevant skills. Global skills in `skills/` apply across rooms; `SKILLS.md` indexes both sets. The starter preserves the working setup: flat native Codex default with no automatic fallbacks, explicit task lanes for planning, implementation, source gathering, extraction and independent review, a protected specialist gate, a manual fourth-family verifier, hard data-class boundaries, live task-matched leaderboards, local evaluation gates, and a weekly human-reviewed offer-source watch. `config/ai/` records the concrete routing shape; `docs/` explains the policies, benchmarks and current public offers. Remove names, account identities, private endpoints, credentials, balances and host paths when adapting the setup; keep the operating design intact.
 
-For model policy, benchmark interpretation and the dated public offers board, start with [Model routing](docs/model-routing.md), [Model evaluation and benchmarks](docs/model-evaluation-and-benchmarks.md) and [Model access and offers](docs/model-access-and-offers.md).
+For the current setup, start with [`config/ai/model_catalog.yaml`](config/ai/model_catalog.yaml) and [`config/ai/routing_policy.yaml`](config/ai/routing_policy.yaml), then read [Model routing](docs/model-routing.md), the [live leaderboard and benchmark board](docs/model-evaluation-and-benchmarks.md#live-benchmark-board) and the [current promotions/free-tiers register](docs/model-access-and-offers.md).
 
 ## Principles
 

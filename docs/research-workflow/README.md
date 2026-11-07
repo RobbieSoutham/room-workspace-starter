@@ -1,6 +1,6 @@
 # Research workflow design
 
-This directory carries the reusable design and operating detail for the research workflow. It preserves the practical setup—framing, protocol, implementation, evidence traceability, verification, communication and improvement—while excluding dated local audit status, account/provider routing, named projects and personal environment paths.
+This directory carries the research-specific design and operating detail: framing, protocol, implementation, evidence traceability, verification, communication and improvement. The overall starter preserves the active room, model-routing and offer-review setup in `config/ai/` and the other `docs/` pages. Personal identities, live account status, private endpoints, secrets, project-specific evidence and host paths stay local.
 
 Use the documents selectively. The main [research workflow](../research-workflow.md) is the short route map; these standards are deeper references for consequential or reusable work. A project should copy and adapt the relevant templates into its own repository. Do not impose every artefact on exploratory work.
 

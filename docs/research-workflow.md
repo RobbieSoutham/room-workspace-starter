@@ -28,7 +28,7 @@ Build each claim from its evidence and qualify it to the study design, scope and
 
 ## 7. Review, revise and release
 
-Use independent critique when stakes or uncertainty justify it. Resolve comments one by one and keep a response trail. Preserve the initial check result, including failures, when a revised version later passes. For model-assisted tasks, evaluate the task-specific workflow against a human/current baseline and retain cost, failure and uncertainty evidence; see [Model evaluation and benchmarks](model-evaluation-and-benchmarks.md). Before sharing, check rights, privacy, secrets, large generated files, reproducibility instructions and the exact released version.
+Use independent critique when stakes or uncertainty justify it. Resolve comments one by one and keep a response trail. Preserve the initial check result, including failures, when a revised version later passes. For model-assisted tasks, evaluate the task-specific workflow against a human/current baseline and retain cost, failure and uncertainty evidence; see [Model evaluation and benchmarks](model-evaluation-and-benchmarks.md). When AI output materially affects a systematic review's methods, analysis or interpretation, consult the [PRISMA-AIM project](https://equator-network.org/reporting-guidelines/under-development/prisma-aim/), which is developing an AI-specific reporting extension and is not yet a completed checklist. Before sharing, check rights, privacy, secrets, large generated files, reproducibility instructions and the exact released version.
 
 ## 8. Archive and learn
 

@@ -1,0 +1,112 @@
+schema_version: 1
+last_updated: "2026-11-07"
+status: "active_workspace_policy"
+model_catalog: "config/ai/model_catalog.yaml"
+benchmark_board: "docs/model-evaluation-and-benchmarks.md#live-benchmark-board"
+purpose: >
+  Task-specific routing policy for the room-based Codex setup. The native
+  Codex default is flat with no automatic model fallback. Other models are
+  selected explicitly for bounded roles; provider quota and data eligibility
+  are checked at launch.
+
+principles:
+  public_benchmarks: "Use current task-matched public leaderboards as shortlist priors, never as sole promotion evidence."
+  local_evaluation: "Require a representative local evaluation before changing defaults, adding a judge, or promoting a high-cost route."
+  independent_review: "Use a different model family only when the task warrants it; verify with primary evidence and deterministic checks where possible."
+  least_cost_sufficient: "Prefer deterministic tools for exact work and the least costly evaluated model that meets the task threshold."
+  uncertainty: "Abstain or escalate when model identity, quota, data permission, or task classification is uncertain."
+
+default:
+  model: "openai-codex/gpt-5.5"
+  fallbacks: []
+  auto_router: false
+
+modes:
+  standard:
+    planner: "gpt-6.1-sol:xhigh"
+    protected_specialist: "claude-opus-5.5:low"
+    heavy_worker: "gpt-5.5:xhigh"
+    heavy_worker_escalation: "gpt-6.1-sol:xhigh"
+    redundancy_auditor: "claude-sonnet-5.5:medium"
+    research_agent: "gpt-5.4:medium"
+    routine_coder: "gpt-5.4-mini:medium"
+    first_pass_summariser: "gpt-5.4-nano:low"
+    forbidden_model_family: "fable-family"
+
+routes:
+  architecture_and_complex_planning:
+    target: "gpt-6.1-sol:xhigh"
+    escalate_to: null
+    admission: "Explicit selection plus current quota/entitlement check"
+  heavy_implementation:
+    target: "gpt-5.5:xhigh"
+    escalate_to: "gpt-6.1-sol:xhigh"
+    admission: "Use current default when available; escalation is explicit, never an automatic provider fallback"
+  scoped_code_edit:
+    target: "gpt-5.4-mini:medium"
+    verify_with: ["deterministic checks", "human review when impact warrants"]
+  source_gathering:
+    target: "gpt-5.4:medium"
+    synthesis_target: "gpt-6.1-sol:xhigh"
+    evidence_rule: "Preserve URLs, retrieved passages and retrieval outcomes separately from model synthesis"
+  first_pass_extraction:
+    target: "gpt-5.4-nano:low"
+    verify_with: ["source sampling", "schema validation"]
+  independent_audit_when_gpt_usage_is_high:
+    target: "claude-sonnet-5.5:medium"
+    evidence_rule: "Separate review context; compare source-level disagreements"
+  protected_adjudication:
+    target: "claude-opus-5.5:low"
+    admission:
+      - "Fresh native account and usage preflight"
+      - "Exact requested and executed model evidence"
+      - "Bounded brief"
+    allowed_roles: ["difficult synthesis", "material disagreement adjudication", "high-risk architecture judgement"]
+    disallowed_roles: ["routine work", "bulk reading", "standing council", "default verification"]
+  fourth_family_verification:
+    primary: "kimi-k2.6"
+    alternate: "deepseek-v3.2-speciale"
+    data_class: "public, non-sensitive only"
+    invoke: "manual opt-in Azure route"
+    rule: "Challenge model output; do not treat it as ground truth or an automatic fallback"
+  low_cost_public_grunt:
+    primary_models: ["groq/openai/gpt-oss-120b", "groq/qwen/qwen3.8-27b"]
+    alternate: "vercel-ai-gateway/openai/gpt-oss-120b"
+    data_class: "public, non-sensitive only"
+    invoke: "manual opt-in free route"
+    rule: "Use for low-stakes work; do not rely on provider fallback or treat outputs as verification"
+  third_party_relay_public_code:
+    model: "agentrouter/gpt-6.1-sol"
+    data_class: "public code only"
+    invoke: "manual opt-in relay route"
+    controls: ["minimal context", "read-only sandbox", "no caller overrides"]
+    rule: "Third-party relay; never a verifier, judge, default or automatic fallback"
+  direct_google_product:
+    model: "gemini-4-argon"
+    access: "official Google AI/Antigravity product"
+    mode: "direct interactive use"
+    rule: "Do not drive subscription quota through another agent unless current provider terms explicitly permit it"
+
+deterministic_first:
+  - "search, filtering and counting"
+  - "context packing and token accounting"
+  - "schema checks, linting and tests"
+  - "exact transformations with a known specification"
+
+hard_blocks:
+  - "fable-family is prohibited in every mode and role"
+  - "no automatic provider or model fallback for the native default"
+  - "no protected-specialist call without fresh admission and a bounded brief"
+  - "no raw large logs or full research dumps to the protected specialist"
+  - "no use of an external route for restricted data without explicit provider and institutional approval"
+  - "no model-quality claim without a catalog entry, task-matched benchmark evidence and local evaluation"
+
+promotion_gate:
+  required_evidence:
+    - "current exact model/provider/route availability"
+    - "live task-relevant leaderboard snapshot and benchmark version"
+    - "matched local evaluation against current route and a human or deterministic baseline"
+    - "cost, latency, failure types, uncertainty and data handling"
+    - "independent review for high-impact or claim-bearing route changes"
+  docs: "docs/model-evaluation-and-benchmarks.md"
+  rollback: "Restore the previous catalog and route; retain evaluation and runtime receipts"
