@@ -44,6 +44,7 @@ Read a skill when its task is needed; do not chain every skill into every job. U
 | [latex-authoring](../workflows/research/skills/latex-authoring/SKILL.md) | Edit and compile LaTeX research documents |
 | [knowledge-base-sync](../workflows/research/skills/knowledge-base-sync/SKILL.md) | Maintain one canonical research note without unsafe overwrites |
 | [self-improving-workflow](../workflows/research/skills/self-improving-workflow/SKILL.md) | Promote reusable workflow changes from checked evidence |
+| [model-evaluation](../workflows/research/skills/model-evaluation/SKILL.md) | Evaluate models and research agents on representative local tasks |
 
 ## Writing and communication
 
@@ -66,4 +67,4 @@ Read a skill when its task is needed; do not chain every skill into every job. U
 
 ## Shared support skills
 
-The global [semantic-gatekeeper](../skills/semantic-gatekeeper/SKILL.md) helps inspect unfamiliar large files safely. [Skill maintenance](../skills/skill-maintenance/SKILL.md) governs changes to procedures. [Research task dashboard](../workflows/research/skills/research-task-dashboard/SKILL.md) is a view over canonical status, not a second source of truth.
+The global [semantic-gatekeeper](../skills/semantic-gatekeeper/SKILL.md) helps inspect unfamiliar large files safely. [Skill maintenance](../skills/skill-maintenance/SKILL.md) governs changes to procedures. [Research task dashboard](../workflows/research/skills/research-task-dashboard/SKILL.md) is a view over canonical status, not a second source of truth. For subscriptions, credits and provider access, use the Operations room's [model-access-review](../workflows/operations/skills/model-access-review/SKILL.md); the generic comparison record is in [Model access and offers](model-access-and-offers.md).

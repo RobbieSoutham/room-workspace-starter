@@ -28,7 +28,7 @@ Build each claim from its evidence and qualify it to the study design, scope and
 
 ## 7. Review, revise and release
 
-Use independent critique when stakes or uncertainty justify it. Resolve comments one by one and keep a response trail. Preserve the initial check result, including failures, when a revised version later passes. Before sharing, check rights, privacy, secrets, large generated files, reproducibility instructions and the exact released version.
+Use independent critique when stakes or uncertainty justify it. Resolve comments one by one and keep a response trail. Preserve the initial check result, including failures, when a revised version later passes. For model-assisted tasks, evaluate the task-specific workflow against a human/current baseline and retain cost, failure and uncertainty evidence; see [Model evaluation and benchmarks](model-evaluation-and-benchmarks.md). Before sharing, check rights, privacy, secrets, large generated files, reproducibility instructions and the exact released version.
 
 ## 8. Archive and learn
 
@@ -36,7 +36,7 @@ Keep canonical documents in one source-of-truth location, working drafts in thei
 
 ## Suggested room layout
 
-`papers/` holds bibliographic records and permitted source files; `literature/` holds structured notes and evidence summaries; `notes/` holds working research notes; `planning/` holds questions, protocols and decision records; `presentations/` and `posters/` hold communication drafts; `figures/` holds source and export files; `meetings/` holds dated minutes; `working/` holds temporary runs and drafts; `references/` holds citation-manager exports or pointers. Use `projects/<slug>/` submodules when a project needs its own Git history or remote. Do not commit private source documents, credentials, caches, environments or generated bulk data by default.
+`papers/` holds bibliographic records and permitted source files; `literature/` holds structured notes and evidence summaries; `notes/` holds working research notes; `planning/` holds questions, protocols and decision records; `presentations/` and `posters/` hold communication drafts; `figures/` holds source and export files; `meetings/` holds dated minutes; `working/` holds temporary runs and drafts; `references/` holds citation-manager exports or pointers. Use `projects/<slug>/` submodules when a project needs its own Git history or remote. Do not commit private source documents, credentials, caches, environments or generated bulk data by default. Model subscriptions, API access and grants belong to the team's operations decision process; distinguish product access from API credits and verify changing terms at official sources using [Model access and offers](model-access-and-offers.md).
 
 ## Evidence states
 

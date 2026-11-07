@@ -36,7 +36,9 @@ projects/<project>/       Independent project repository as a Git submodule
 ```
 
 The example rooms are `operations`, `research` and `projects`. They are placeholders; adapt them freely.
-Each room has its own context, source-of-truth knowledge and relevant skills. Global skills in `skills/` apply across rooms; `SKILLS.md` indexes both sets. The Research room demonstrates the arrangement with source-backed workflow docs, canonical methods documents, a broad set of generic skills, templates, directory starters and a fictional example that preserves failed first checks.
+Each room has its own context, source-of-truth knowledge and relevant skills. Global skills in `skills/` apply across rooms; `SKILLS.md` indexes both sets. The starter preserves the working setup pattern: room routing, source-of-truth ownership, skill-based workflows, independent verification, empirical workflow improvement, cross-CLI/tool boundaries, scheduler and persistence guidance, model routing and benchmark evaluation, plus an official-source process for model offers. `docs/` explains how these parts fit together; adapt host-specific implementation details locally and remove account/private status rather than removing the reusable setup.
+
+For model policy, benchmark interpretation and the dated public offers board, start with [Model routing](docs/model-routing.md), [Model evaluation and benchmarks](docs/model-evaluation-and-benchmarks.md) and [Model access and offers](docs/model-access-and-offers.md).
 
 ## Principles
 

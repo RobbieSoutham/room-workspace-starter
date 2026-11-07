@@ -21,5 +21,6 @@ Maintain shared workspace tools, reliability and operating procedures.
 - `change-planning` — scope operational changes, validation and rollback
 - `service-health-review` — assess service health and distinguish observations from assumptions
 - `capacity-and-cost-review` — compare resource needs and operating costs before changes
+- `model-access-review` — compare subscriptions, API access, credits and education/research offers using current official terms
 
 Global skills are indexed in repository `SKILLS.md`.

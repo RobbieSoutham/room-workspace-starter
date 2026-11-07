@@ -42,6 +42,7 @@ Manage research questions, evidence, methods and academic outputs.
 - `literature-note-intake` — Triage a newly found paper into a verified bibliographic record and literature note.
 - `literature-survey-controller` — Coordinate a broad literature survey with bounded search strands, a candidate ledger and evidence-based synthesis.
 - `literature-synthesis` — Synthesize a defined set of sources into a traceable account of themes, disagreements and gaps.
+- `model-evaluation` — Evaluate candidate models and research agents on representative, task-specific work using reproducible conditions and human-checked outcomes.
 - `manuscript-review` — Review a research manuscript for argument, structure, methods reporting and claim calibration.
 - `meeting-note-distill` — Turn research meeting notes into an accurate record of decisions, evidence, actions and open questions.
 - `multi-model-critical` — Use independent model reviews to find errors in high-consequence research synthesis, with evidence-based adjudication.

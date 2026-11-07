@@ -18,6 +18,7 @@ This is the complete index of reusable agent procedures shipped in this starter.
 | Skill | Use it for |
 |---|---|
 | [`capacity-and-cost-review`](workflows/operations/skills/capacity-and-cost-review/SKILL.md) | Comparing capacity, cost and operating burden before a resource decision |
+| [`model-access-review`](workflows/operations/skills/model-access-review/SKILL.md) | Comparing current subscriptions, API access, credits and education/research programmes |
 | [`change-planning`](workflows/operations/skills/change-planning/SKILL.md) | Scoping an operational change, validation, authority and rollback |
 | [`incident-review`](workflows/operations/skills/incident-review/SKILL.md) | Recording impact, evidence, cause, remediation and follow-up |
 | [`service-health-review`](workflows/operations/skills/service-health-review/SKILL.md) | Assessing current service health and evidence quality |
@@ -46,6 +47,7 @@ This is the complete index of reusable agent procedures shipped in this starter.
 | [`literature-survey-controller`](workflows/research/skills/literature-survey-controller/SKILL.md) | Coordinate a broad literature survey with bounded search strands, a candidate ledger and evidence-based synthesis. |
 | [`literature-synthesis`](workflows/research/skills/literature-synthesis/SKILL.md) | Synthesize a defined set of sources into a traceable account of themes, disagreements and gaps. |
 | [`manuscript-review`](workflows/research/skills/manuscript-review/SKILL.md) | Review a research manuscript for argument, structure, methods reporting and claim calibration. |
+| [`model-evaluation`](workflows/research/skills/model-evaluation/SKILL.md) | Compare models or research agents on representative tasks with recorded conditions, outcomes, cost and failure analysis. |
 | [`meeting-note-distill`](workflows/research/skills/meeting-note-distill/SKILL.md) | Turn research meeting notes into an accurate record of decisions, evidence, actions and open questions. |
 | [`multi-model-critical`](workflows/research/skills/multi-model-critical/SKILL.md) | Use independent model reviews to find errors in high-consequence research synthesis, with evidence-based adjudication. |
 | [`paper-code-discovery`](workflows/research/skills/paper-code-discovery/SKILL.md) | Investigate whether a paper's software or data are publicly available and usable. |
