@@ -23,6 +23,7 @@ SOURCE_OF_TRUTH.md        Canonical location for each kind of information
 SKILLS.md                 Complete global and room-local skill index
 MEMORY.md                 Small, durable cross-room facts
 PROTOCOLS.md              Versioned procedures and decision rules
+docs/                     Cross-room workflow documentation and source-backed guidance
 skills/<skill>/SKILL.md   Reusable procedures available across rooms
 workflows/<room>/
   CONTEXT.md              Room identity, conventions and boundaries
@@ -30,11 +31,12 @@ workflows/<room>/
   knowledge/README.md     Index and rules for room-owned knowledge
   skills/<skill>/SKILL.md  Room-local procedures for agents
   memory/                 Room-specific durable notes
+  research/               Research examples, planning, papers, notes and outputs
 projects/<project>/       Independent project repository as a Git submodule
 ```
 
 The example rooms are `operations`, `research` and `projects`. They are placeholders; adapt them freely.
-Each room has its own context, source-of-truth knowledge and relevant skills. Global skills in `skills/` apply across rooms; `SKILLS.md` indexes both sets. The Research room demonstrates the arrangement with canonical evidence and methods documents, skills and project templates.
+Each room has its own context, source-of-truth knowledge and relevant skills. Global skills in `skills/` apply across rooms; `SKILLS.md` indexes both sets. The Research room demonstrates the arrangement with source-backed workflow docs, canonical methods documents, a broad set of generic skills, templates, directory starters and a fictional example that preserves failed first checks.
 
 ## Principles
 

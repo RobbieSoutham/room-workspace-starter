@@ -16,6 +16,7 @@ Each topic should have one canonical home. Other documents should link to it rat
 | Project question, protocol, evidence and deviations | The relevant project repository, using `workflows/research/templates/` | Copy and complete records in project context; do not store project data or findings in this generic starter |
 | Cross-room durable memory | `MEMORY.md` | Keep brief; link to room-owned sources |
 | Shared procedures and decision rules | `PROTOCOLS.md` | Version material changes and record the effective date |
+| Cross-room workflow explanations and source-based guidance | `docs/` | Keep maintained explanations here; cite primary or authoritative sources and label guidance by scope |
 | Room names and ownership | `ROOMS.md` | Update when rooms are added, renamed or re-scoped |
 | Project code, data references, evidence and delivery records | `projects/<project-name>/` Git submodule and its own repository records | Commit and push project work to its own remote; this repository tracks only the submodule pointer |
 

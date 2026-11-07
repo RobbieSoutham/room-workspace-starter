@@ -26,14 +26,48 @@ This is the complete index of reusable agent procedures shipped in this starter.
 
 | Skill | Use it for |
 |---|---|
-| [`claim-evidence-audit`](workflows/research/skills/claim-evidence-audit/SKILL.md) | Checking whether evidence supports specific research claims |
-| [`evidence-led-review`](workflows/research/skills/evidence-led-review/SKILL.md) | Planning and conducting traceable literature searches and reviews |
-| [`literature-synthesis`](workflows/research/skills/literature-synthesis/SKILL.md) | Comparing an identified set of sources into themes and disagreements |
-| [`manuscript-review`](workflows/research/skills/manuscript-review/SKILL.md) | Developmental review of argument, methods reporting and claim calibration |
-| [`research-communication`](workflows/research/skills/research-communication/SKILL.md) | Adapting established evidence for an audience or format |
-| [`research-frame`](workflows/research/skills/research-frame/SKILL.md) | Framing or revising a research question before substantial work |
-| [`research-protocol`](workflows/research/skills/research-protocol/SKILL.md) | Specifying methods and reproducibility before claim-bearing work |
-| [`research-question-development`](workflows/research/skills/research-question-development/SKILL.md) | Turning a broad topic into a focused, answerable question |
+| [`audience-alignment`](workflows/research/skills/audience-alignment/SKILL.md) | Define an evidence-based audience profile and check whether a research output fits its readers. |
+| [`brainstorm`](workflows/research/skills/brainstorm/SKILL.md) | Develop a research idea into a testable, source-aware set of options. |
+| [`citation-audit`](workflows/research/skills/citation-audit/SKILL.md) | Check citation identity, completeness and claim support in research writing. |
+| [`claim-evidence-audit`](workflows/research/skills/claim-evidence-audit/SKILL.md) | Check whether citations, data and calculations support claims in research writing, reports or presentations. |
+| [`connected-paper-search`](workflows/research/skills/connected-paper-search/SKILL.md) | Expand a literature search from several seed papers using citation links and related-work services. |
+| [`corpus-rag-synthesis`](workflows/research/skills/corpus-rag-synthesis/SKILL.md) | Answer a research question from a bounded, user-supplied paper corpus with claim-level citations. |
+| [`deck-build`](workflows/research/skills/deck-build/SKILL.md) | Turn research evidence into a structured presentation draft and review its narrative. |
+| [`deep-research-verifier`](workflows/research/skills/deep-research-verifier/SKILL.md) | Run a bounded, source-grounded investigation with an evidence ledger and independent verification. |
+| [`evidence-finder`](workflows/research/skills/evidence-finder/SKILL.md) | Locate exact passages and assess whether a source supports a research claim. |
+| [`evidence-led-review`](workflows/research/skills/evidence-led-review/SKILL.md) | Plan, conduct or synthesise a literature review with a traceable search and evidence trail. |
+| [`experiment-lifecycle`](workflows/research/skills/experiment-lifecycle/SKILL.md) | Specify, implement and close out a claim-bearing computational experiment with evidence gates. |
+| [`figure-generation`](workflows/research/skills/figure-generation/SKILL.md) | Select and build a research figure that accurately communicates its data or method. |
+| [`hypothesis-generation`](workflows/research/skills/hypothesis-generation/SKILL.md) | Generate and prioritise falsifiable research hypotheses grounded in a defined literature base. |
+| [`knowledge-base-sync`](workflows/research/skills/knowledge-base-sync/SKILL.md) | Maintain a research knowledge base without creating competing copies or overwriting local work. |
+| [`latex-authoring`](workflows/research/skills/latex-authoring/SKILL.md) | Draft and revise LaTeX research documents while preserving citations, structure and reproducibility. |
+| [`literature-note`](workflows/research/skills/literature-note/SKILL.md) | Create a structured, source-linked note for one research paper. |
+| [`literature-note-intake`](workflows/research/skills/literature-note-intake/SKILL.md) | Triage a newly found paper into a verified bibliographic record and literature note. |
+| [`literature-survey-controller`](workflows/research/skills/literature-survey-controller/SKILL.md) | Coordinate a broad literature survey with bounded search strands, a candidate ledger and evidence-based synthesis. |
+| [`literature-synthesis`](workflows/research/skills/literature-synthesis/SKILL.md) | Synthesize a defined set of sources into a traceable account of themes, disagreements and gaps. |
+| [`manuscript-review`](workflows/research/skills/manuscript-review/SKILL.md) | Review a research manuscript for argument, structure, methods reporting and claim calibration. |
+| [`meeting-note-distill`](workflows/research/skills/meeting-note-distill/SKILL.md) | Turn research meeting notes into an accurate record of decisions, evidence, actions and open questions. |
+| [`multi-model-critical`](workflows/research/skills/multi-model-critical/SKILL.md) | Use independent model reviews to find errors in high-consequence research synthesis, with evidence-based adjudication. |
+| [`paper-code-discovery`](workflows/research/skills/paper-code-discovery/SKILL.md) | Investigate whether a paper's software or data are publicly available and usable. |
+| [`paper-reviewer`](workflows/research/skills/paper-reviewer/SKILL.md) | Review a research manuscript for contribution, evidence, methods, reporting and clarity. |
+| [`paper-scaffold`](workflows/research/skills/paper-scaffold/SKILL.md) | Turn a defined research question or result into a source-aware manuscript structure. |
+| [`paper-selection`](workflows/research/skills/paper-selection/SKILL.md) | Select candidate papers using explicit relevance and evidence-access criteria. |
+| [`paper-summary`](workflows/research/skills/paper-summary/SKILL.md) | Create a concise, evidence-linked summary of a research paper for later synthesis. |
+| [`poster-build`](workflows/research/skills/poster-build/SKILL.md) | Design a scientific poster that communicates a bounded research result clearly and accurately. |
+| [`presentation-finalisation`](workflows/research/skills/presentation-finalisation/SKILL.md) | Run a final source, narrative and rendering audit on a research presentation. |
+| [`research-collaborator-communication`](workflows/research/skills/research-collaborator-communication/SKILL.md) | Draft accurate research correspondence for a collaborator, editor or research group. |
+| [`research-communication`](workflows/research/skills/research-communication/SKILL.md) | Adapt established research for a named audience, format and purpose without changing its evidential strength. |
+| [`research-council`](workflows/research/skills/research-council/SKILL.md) | Structure independent builder, critic and red-team review of a research question or evidence synthesis. |
+| [`research-document-writing`](workflows/research/skills/research-document-writing/SKILL.md) | Draft or revise research plans, summaries and synthesis documents from supplied evidence. |
+| [`research-frame`](workflows/research/skills/research-frame/SKILL.md) | Frame or revise a research question before substantial evidence collection, analysis or implementation. |
+| [`research-knowledge-context`](workflows/research/skills/research-knowledge-context/SKILL.md) | Load a bounded research knowledge base to provide relevant context without treating notes as primary evidence. |
+| [`research-mode`](workflows/research/skills/research-mode/SKILL.md) | Enforce source-grounded answers, citations and explicit uncertainty during research tasks. |
+| [`research-protocol`](workflows/research/skills/research-protocol/SKILL.md) | Specify a research method and reproducibility record before claim-bearing data collection, analysis or computational work. |
+| [`research-question-development`](workflows/research/skills/research-question-development/SKILL.md) | Turn a topic or problem into a focused, answerable research question and explicit scope. |
+| [`research-task-dashboard`](workflows/research/skills/research-task-dashboard/SKILL.md) | Maintain a concise view of active research work, decisions and next actions. |
+| [`self-improving-workflow`](workflows/research/skills/self-improving-workflow/SKILL.md) | Improve a reusable research procedure through versioned changes, empirical checks and reversible rollout. |
+| [`slide-polish`](workflows/research/skills/slide-polish/SKILL.md) | Improve slide clarity, visual hierarchy and audience fit without changing the research evidence. |
+| [`venue-alignment`](workflows/research/skills/venue-alignment/SKILL.md) | Compare candidate journals or conferences against a manuscript's contribution, audience and verified requirements. |
 
 ## Projects room
 
