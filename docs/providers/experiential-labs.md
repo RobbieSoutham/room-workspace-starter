@@ -12,6 +12,21 @@ Use `deepseek-v4.1-flash:free` for this lane. The documented `:free` suffix stop
 
 One credit is $0.01. The balance API's `total_credits` and `total_usage` are already USD: subtract them for the dollar balance, then multiply by 100 for credits. A credit grant is a finite wallet, separate from any daily free allowance. Claude Fable 5.1 is listed at $10/M input and $50/M output on Free, and is not a free-core model. The workspace's Fable prohibition applies to this provider too.
 
+## Fable 5.2 launch promotion
+
+The [official Fable 5.2 model page](https://platform.experientiallabs.ai/models/claude-fable-5.2) separately advertises `claude-fable-5.2:free` for a 48-hour launch offer during **9–11 November 2026**. This differs from paid Fable 5.1 and the general Free-core allowance. Recheck before relying on it and by **11 November**; an exact UTC cutoff is not established by the page's date label.
+
+The public page's embedded promotion configuration, checked on 10 November 2026, gives:
+
+| Period | Input tokens | Output tokens |
+|---|---:|---:|
+| Hour | 285,000 | 57,000 |
+| Day | 1,140,000 | 228,000 |
+
+The configuration sets `requires_payment_method=true`, `requires_payment=true` and `free_only_via_suffix=true`; its hourly/daily display flags are false. These are configured promotion values, not a measured account balance or proof of eligibility/enforcement. The page does not establish exact reset semantics or a separate requests-per-minute cap. The plain model lists $8/M input and $40/M output. The free-only suffix is the relevant offer identifier.
+
+The workspace's Fable prohibition applies to 5.2 as well; this catalogue entry records an offer and does not enable execution. The bundled launcher remains DeepSeek-only. When reviewing access, check exact model versions, live promotions, suffixes, eligibility and expiry separately from general pricing. A family label or an older version's paid rate cannot settle a newer version's promotional availability.
+
 ## Configure and run
 
 Use Python 3.9 or later; only the standard library is needed. Set `EXPLABS_API_KEY` in your private environment, or copy [the blank example](../../config/ai/experiential.env.example) to an untracked private file and set `EXPLABS_SECRETS_FILE` to its path. The older `EXPERIMENTAL_LABS_API_KEY` variable is accepted for compatibility. Keep the actual key outside Git and command-line arguments.

@@ -32,6 +32,34 @@ models:
     source_urls: ["https://www.experientiallabs.ai/pricing", "https://platform.experientiallabs.ai/llms.txt"]
     setup: "docs/providers/experiential-labs.md"
 
+  - id: "claude-fable-5.2"
+    aliases: ["Claude Fable 5.2", "claude-fable-5-2", "claude-fable-5.2:free"]
+    provider: "anthropic via Experiential Labs"
+    access_surface: "advertised launch promotion; entitlement and inference must be checked separately"
+    route_status: "prohibited_by_workspace_policy"
+    roles: []
+    context_window_tokens: 1000000
+    max_output_tokens: 128000
+    input_usd_per_mtok: 8.0
+    output_usd_per_mtok: 40.0
+    promotion:
+      free_model_id: "claude-fable-5.2:free"
+      advertised_window: "48-hour launch offer, 9–11 November 2026"
+      exact_expiry_utc: null
+      recheck_by: "2026-11-11"
+      separate_from_free_core: true
+      free_only_via_suffix: true
+      free_input_tokens_per_hour: 285000
+      free_output_tokens_per_hour: 57000
+      free_input_tokens_per_day: 1140000
+      free_output_tokens_per_day: 228000
+      requires_payment_method: true
+      requires_payment: true
+      source_basis: "Public page embedded promotion configuration; hourly/daily display flags are false. Configuration is not account entitlement or runtime verification."
+    constraints: ["Recheck the offer before use and by its advertised end date", "Fable family execution block still applies", "Plain slug is metered; do not infer policy permission from a free offer"]
+    source_check_date: "2026-11-10"
+    source_urls: ["https://platform.experientiallabs.ai/models/claude-fable-5.2", "https://platform.experientiallabs.ai/llms.txt"]
+
   - id: "claude-fable-5.1"
     aliases: ["Claude Fable 5.1", "claude-fable-5-1"]
     provider: "anthropic"
