@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: "2026-11-07"
+last_updated: "2026-11-10"
 purpose: >
   Workspace model inventory and routing-role source of truth. Provider model IDs
   and roles reflect the current room-based setup; live entitlement, quota and
@@ -17,6 +17,35 @@ default_route:
   note: "The native Codex route is flat; other families are deliberate opt-in lanes, not automatic fallbacks."
 
 models:
+  - id: "experiential/deepseek-v4.1-flash:free"
+    aliases: ["Experiential Labs DeepSeek V4.1 Flash"]
+    provider: "deepseek via Experiential Labs"
+    access_surface: "explicit OpenAI-compatible free API lane"
+    runtime_model_id: "deepseek-v4.1-flash:free"
+    route_status: "manual_public_text_lane"
+    roles: ["low-stakes public-text extraction and summaries"]
+    permitted_data: ["public, non-sensitive text only"]
+    context_window_tokens: 1048576
+    max_output_tokens: 393216
+    constraints: ["Use :free to prevent credit overflow", "One generation attempt and no provider fallback", "Require returned model and usage.cost=0", "Not a default or final judge", "Card/payment verification required; provider quota still applies", "Some upstream routes permit training or retention"]
+    source_check_date: "2026-11-10"
+    source_urls: ["https://www.experientiallabs.ai/pricing", "https://platform.experientiallabs.ai/llms.txt"]
+    setup: "docs/providers/experiential-labs.md"
+
+  - id: "claude-fable-5.1"
+    aliases: ["Claude Fable 5.1", "claude-fable-5-1"]
+    provider: "anthropic"
+    access_surface: "listed by Experiential Labs; account access must be checked privately"
+    route_status: "prohibited_by_workspace_policy"
+    roles: []
+    context_window_tokens: 1000000
+    max_output_tokens: 128000
+    input_usd_per_mtok: 10.0
+    output_usd_per_mtok: 50.0
+    constraints: ["Not included in Experiential Free core", "Finite credits are metered spending, not free model access", "Fable family hard block still applies"]
+    source_check_date: "2026-11-10"
+    source_urls: ["https://www.experientiallabs.ai/pricing", "https://api.experientiallabs.ai/api/models/claude-fable-5.1"]
+
   - id: "gpt-5.5"
     aliases: ["GPT-5.5", "openai-codex/gpt-5.5"]
     provider: "openai"

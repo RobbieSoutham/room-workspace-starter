@@ -31,6 +31,8 @@ The repository ships the current room-based setup's model catalogue and routing 
 
 ## Task-lane register
 
+An additional explicit public-text lane uses Experiential Labs DeepSeek V4.1 Flash with the `:free` suffix, a one-attempt cap and provider fallback disabled. It stops at the free allowance; finite wallet credits do not make other models free. Fable 5.1 remains prohibited. Follow the [setup guide](providers/experiential-labs.md) for credentials, balance units, privacy limits and verification. This lane does not change the native default or promote a final judge.
+
 Define lanes by work and risk, not by brand preference. A useful initial register might include:
 
 | Lane | Primary route | Fallback/abstain | Data class | Public benchmark prior + checked date | Local evaluation |

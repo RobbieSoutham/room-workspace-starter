@@ -63,10 +63,13 @@ This section captures offers where a small purchase, student subscription or pai
 
 ## Current free API tiers and model access
 
+**Experiential Labs row reviewed 10 November 2026; other rows retain their 7 November review.**
+
 These are limited service tiers, not grants. Rates shown are the provider's published snapshot checked on 7 November 2026; account-level limits and eligible models may differ. Check the live dashboard before use.
 
 | Provider | Published free access | Practical limits and data caveat | Official source |
 |---|---|---|---|
+| Experiential Labs | Free core includes GPT-6 Luna, DeepSeek V4.1 Flash and Clef after card/payment verification; 1M input/output tokens/day shared, reset 00:00 UTC | Pricing says shared 10 RPM/250K TPM, machine reference says per model; use the conservative shared limit and honour 429. `:free` stops at the allowance instead of spending credits. One credit is $0.01; model listings and finite grants do not mean free inference. **Fable 5.1 is paid** ($10/M input, $50/M output) and remains prohibited. Route-level training/retention varies: public text only. | [Pricing](https://www.experientiallabs.ai/pricing), [free-only contract](https://platform.experientiallabs.ai/llms.txt), [setup guide](providers/experiential-labs.md) |
 | Google Gemini Developer API / AI Studio | Free input and output for selected models; AI Studio use is free in supported regions | Limited model access and per-model rate limits. Google states free-tier content may be used to improve products; keep confidential, licensed, participant and unpublished work out. Paid tier states content is not used for product improvement. | [Pricing, model availability and data-use terms](https://ai.google.dev/gemini-api/docs/pricing) |
 | Groq API | Free access for supported developer-tier models | Published base limits for `openai/gpt-oss-120b` and `qwen/qwen3.8-27b`: 30 RPM, 1,000 RPD, 8K TPM and 200K TPD. Provider says exact organisation limits appear in its dashboard and can vary. | [Current rate-limit table](https://console.groq.com/docs/rate-limits) |
 | Vercel AI Gateway | $5/month included for AI Gateway requests on each team account's free tier; all models are listed as accessible | The free credit starts with the first Gateway request. Buying credits moves the account to paid and removes the recurring monthly free credit. Use of a model draws against its provider list price; a zero-price model is a separate, changeable promotion. | Current published pricing | [Gateway pricing](https://vercel.com/docs/ai-gateway/pricing), [live model/promotions catalogue](https://vercel.com/ai-gateway/models?sortField=freeTier) |

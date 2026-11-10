@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: "2026-11-07"
+last_updated: "2026-11-10"
 status: "active_workspace_policy"
 model_catalog: "config/ai/model_catalog.yaml"
 benchmark_board: "docs/model-evaluation-and-benchmarks.md#live-benchmark-board"
@@ -75,6 +75,12 @@ routes:
     data_class: "public, non-sensitive only"
     invoke: "manual opt-in free route"
     rule: "Use for low-stakes work; do not rely on provider fallback or treat outputs as verification"
+  experiential_free_public_text:
+    model: "experiential/deepseek-v4.1-flash:free"
+    data_class: "public, non-sensitive text only"
+    invoke: "python3 tools/agent_invoke/experiential_lane.py '<prompt>' --public"
+    controls: ["free-only model suffix", "one generation attempt", "no provider fallback", "expected model and zero cost required"]
+    rule: "Explicit low-stakes lane; no credit overflow, default adoption or final-judge role"
   third_party_relay_public_code:
     model: "agentrouter/gpt-6.1-sol"
     data_class: "public code only"
