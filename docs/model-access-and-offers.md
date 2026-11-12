@@ -95,7 +95,7 @@ These are limited service tiers, not grants. Rates shown are the provider's publ
 
 ## Review and decision record
 
-The Ops setup runs a weekly source-diff watch over provider offer pages and free-model listings. The watch produces a change report; it does not edit or promote this board. A maintainer checks the primary source and then updates the row. Recheck this board at least weekly and immediately before applying, purchasing or changing a route. For each changed row, update its checked date, benefit, eligibility, expiry, data terms, status and official URL. Mark unverified details plainly; move expired offers to the ended section with the date. Never copy an individual's claim status, email, balance, application or verification record into this public repository.
+The Ops setup runs a daily source-diff watch over provider offer pages and free-model listings. The watch produces a change report; it does not edit or promote this board. A maintainer checks the primary source and then updates the row. Recheck this board at least weekly and immediately before applying, purchasing or changing a route. For each changed row, update its checked date, benefit, eligibility, expiry, data terms, status and official URL. Mark unverified details plainly; move expired offers to the ended section with the date. Never copy an individual's claim status, email, balance, application or verification record into this public repository.
 
 ### Keep the public starter aligned with the working setup
 
